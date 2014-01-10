@@ -1,4 +1,6 @@
 Pharmacy::Application.routes.draw do
+  get "packing/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

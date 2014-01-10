@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(:version => 20131220104701) do
 
   create_table "packings", :force => true do |t|
     t.string   "name"
-    t.string   "code",       :limit => 20
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.string   "code"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "purchases", :force => true do |t|
@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20131220104701) do
     t.integer  "quantity"
     t.decimal  "mrp",         :precision => 8, :scale => 2
     t.date     "expdate"
-    t.date     "mfddate"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end
