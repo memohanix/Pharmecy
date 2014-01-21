@@ -1,62 +1,15 @@
-<!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en">
-	<!--<![endif]-->
-	<head>
-		<meta charset="utf-8" />
-
-		<!-- Uncomment to make IE8 render like IE7 -->
-		<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
-
-		<!-- Set the viewport width to device width for mobile -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-		<%= javascript_include_tag "vendor/jquery" %>
-		<%= stylesheet_link_tag    "application" %>
-		<%= javascript_include_tag "vendor/custom.modernizr" %>
-
-		<%= csrf_meta_tags %>
-	</head>
-
-	<body>
-		<div class="heading">
-			<div class="row">
-				<nav class="top-bar" data-topbar data-topbar data-options="is_hover: false">
-					<section class="top-bar-section">
-						<ul class="right">
-
-							<li class="has-dropdown">
-								<a href="#">Welcome</a>
-								<ul class="dropdown">
-									<li>
-										<a href="#">Your profile</a>
-									</li>
-									<li>
-										<a href="#">Setting</a>
-									</li>
-									<li>
-										<a href="#">Logout</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</section>
-				</nav>
+<%= render 'layouts/header' %>
+<%= render 'layouts/top-navigation' %>
+<div class="row margin-10">
+	<%= render 'layouts/navigation' %>
+	<div class="medium-7 large-7 columns">
+		<%= render 'layouts/breadcrumb' %>
+		<div class="row">
+			<div class="large-12 columns">
+				<%= yield %>
 			</div>
 		</div>
-		<div class="row margin-10">
-<%= render 'layouts/navigation' %>
-			
-		</div>
-		<%= yield %>
-
-		<%= javascript_include_tag "application" %>
-
-	</body>
-</html>
+	</div>
+	<%= render 'layouts/sidebar'%>
+</div>
+<%= render 'layouts/footer'%>

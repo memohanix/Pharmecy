@@ -1,4 +1,4 @@
-<div class="medium-4 large-3 columns">
+<div class="small-12 medium-3 large-3 columns">
 	<div id="cssmenu">
 
 		<ul>
@@ -9,13 +9,17 @@
 				<a href="#"><i class="general foundicon-plus"></i>Medicine</a>
 				<ul class="square">
 					<li>
-						<a href="#">Sub-Item 1 a</a>
+						<%= link_to "New Packing", :controller => "packings", :action => "new" %>
+
 					</li>
 					<li>
-						<a href="#">Sub-Item 1 b</a>
+						<%= link_to "List Packings", :controller => "packings", :action => "index" %>
 					</li>
 					<li>
-						<a href="#">Sub-Item 1 c</a>
+						<%= link_to "New Medicine", :controller => "medicines", :action => "new" %>
+					</li>
+					<li>
+						<%= link_to "List Medicine", :controller => "medicines", :action => "index" %>
 					</li>
 				</ul>
 			</li>

@@ -1,0 +1,26 @@
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
+	<thead>
+		<tr>
+			<th width="200">Name</th>
+
+			<th width="150">Code</th>
+			<th width="150">Operation</th>
+			<th width="150">Operation</th>
+			<th width="150">Operation</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<% @packings.each do |packing| %>
+		<tr>
+			<td><%= packing.name %></td>
+			<td><%= packing.code %></td>
+
+			<td><%= link_to 'Show', packing %></td>
+			<td><%= link_to 'Edit', edit_packing_path(packing) %></td>
+			<td><%= link_to 'Destroy', packing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+
+	</tbody>
+</table>

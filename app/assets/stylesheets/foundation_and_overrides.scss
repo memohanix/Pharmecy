@@ -1180,7 +1180,7 @@ $default-float: left;
 // These control the background color for the table and even rows
 
 // $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9;
+ $table-even-row-bg: #eee;
 
 // These control the table cell border style
 
@@ -1190,7 +1190,7 @@ $default-float: left;
 
 // These control the table head styles
 
-// $table-head-bg: #f5f5f5;
+ $table-head-bg: #f5f5f5;
 // $table-head-font-size: em-calc(14);
 // $table-head-font-color: #222;
 // $table-head-font-weight: bold;
@@ -1274,7 +1274,7 @@ $topbar-bg: $topbar-bg-color;
 
 // Style the top bar dropdown elements
 
-// $topbar-dropdown-bg: #222;
+ $topbar-dropdown-bg: #0076a9;
 // $topbar-dropdown-link-color: #fff;
 // // $topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%);
 // $topbar-dropdown-toggle-size: 5px;
@@ -1289,8 +1289,8 @@ $topbar-bg: $topbar-bg-color;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: em-calc(13);
 // $topbar-link-hover-lightness: -30%; // Darken by 30%
-// $topbar-link-bg-hover: darken($topbar-bg-color, 3%);
-// $topbar-link-bg-active: darken($topbar-bg-color, 3%);
+ $topbar-link-bg-hover: darken($topbar-bg-color, 3%);
+$topbar-link-bg-active: darken($topbar-bg-color, 3%);
 
 // $topbar-dropdown-label-color: #555;
 // $topbar-dropdown-label-text-transform: uppercase;

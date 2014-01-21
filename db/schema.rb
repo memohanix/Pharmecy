@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20131220104701) do
   create_table "packings", :force => true do |t|
     t.string   "name"
     t.string   "code"
+    t.integer  "unit"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

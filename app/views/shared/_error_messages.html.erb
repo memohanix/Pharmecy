@@ -1,0 +1,14 @@
+<% if target.errors.any? %>
+<div class="alert-box alert">
+	<%= pluralize(target.errors.count,'errors') %>  are accured
+	<a href="#" class="close">&times;</a>
+</div>
+
+<ul class="square margin-left-20">
+	<% target.errors.full_messages.each do |msg| %>
+	<li>
+		<%= msg %>
+	</li>
+	<% end %>
+</ul>
+<% end %>
