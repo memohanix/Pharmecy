@@ -1,6 +1,10 @@
 <h1>Editing product</h1>
-
 <%= render 'form' %>
-
-<%= link_to 'Show', @packings %> |
-<%= link_to 'Back', packings_path %>
+<ul class="button-group">
+	<li>
+		<%= link_to 'Show', @packings,class:'button tiny alert' %>
+	</li>
+	<li>
+		<%= link_to 'Back', packings_path,class:'button tiny alert' %>
+	</li>
+</ul>

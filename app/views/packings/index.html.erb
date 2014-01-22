@@ -2,11 +2,8 @@
 	<thead>
 		<tr>
 			<th width="200">Name</th>
-
 			<th width="150">Code</th>
-			<th width="150">Operation</th>
-			<th width="150">Operation</th>
-			<th width="150">Operation</th>
+			<th width="150">Operation</th>			
 		</tr>
 	</thead>
 	<tbody>
@@ -16,9 +13,10 @@
 			<td><%= packing.name %></td>
 			<td><%= packing.code %></td>
 
-			<td><%= link_to 'Show', packing %></td>
-			<td><%= link_to 'Edit', edit_packing_path(packing) %></td>
-			<td><%= link_to 'Destroy', packing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to(raw("<i class='fi-zoom-in'></i>"),packing) %><%= ' ' %>
+			<%= link_to(raw("<i class='fi-pencil'></i>"),edit_packing_path(packing)) %>
+			<%= link_to(raw("<i class='fi-x'></i>"),packing, method: :delete, data: { confirm: 'Are you sure?' })%>		
+			
 		</tr>
 		<% end %>
 

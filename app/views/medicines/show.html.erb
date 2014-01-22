@@ -1,2 +1,24 @@
-<h1>Medicines#show</h1>
-<p>Find me in app/views/medicines/show.html.erb</p>
+<div class="panel radius">
+	<h3>Details of Packing</h3>
+	<p>
+		<strong>Name : </strong><%= @medicine.name%>
+	</p>
+	<% unless @medicine.description.blank? %>
+	<p>
+		<strong>Description : </strong><%= @medicine.description%>
+	</p>
+	<% end %>
+	<% unless @medicine.manufacturer.blank? %>
+	<p>
+		<strong>Manufacture : </strong><%= @medicine.manufacturer%>
+	</p>
+	<% end %>
+</div>
+<ul class="button-group">
+	<li>
+		<%= link_to 'Back to Medicines', {:action => 'index'},class:'button tiny alert' %>
+	</li>
+	<li>
+		<%= link_to 'Edit',edit_medicine_path(@medicine),class:'button tiny alert' %>
+	</li>
+</ul>

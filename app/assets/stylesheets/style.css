@@ -40,7 +40,8 @@ span a.paginate_button {
 span a.paginate_button:hover,span a.paginate_button:focus {
 	background:none repeat scroll 0 0 #e6e6e6;
 	border-radius:3px;
-	color:#999999;
-	
+	color:#999999;	
 	padding:0.05556rem 0.55556rem;
 }
+.fi-plus,.fi-shopping-cart,.fi-price-tag,.fi-torsos-all{margin-right:0.3em; background: #f9f9f9; border-radius:20px; color:#3C8DBC;padding:2px 4px;}
+.fi-zoom-in,.fi-pencil,.fi-x{padding-right:0.5em}

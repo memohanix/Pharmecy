@@ -1,6 +1,6 @@
 class MedicinesController < ApplicationController
   def index
-    @medicines = Medicine.all
+    @medicines = Medicine.joins(:packing)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @medicines}
@@ -25,9 +25,21 @@ class MedicinesController < ApplicationController
   end
 
   def edit
+    @medicines = Medicine.find(params[:id])
   end
 
   def update
+    @medicine = Medicine.find(params[:id])
+
+    respond_to do |format|
+      if @medicine.update_attributes(params[:medicine])
+        format.html { redirect_to @medicine, notice: 'Product was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @medicine.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def show
@@ -35,5 +47,11 @@ class MedicinesController < ApplicationController
   end
 
   def destroy
+    @medicine = Medicine.find(params[:id])
+    @medicine.destroy
+    respond_to do |format|
+      format.html { redirect_to medicines_url }
+      format.json { head :no_content }
+    end
   end
 end

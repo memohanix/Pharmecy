@@ -1,0 +1,20 @@
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
+	<thead>
+		<tr>
+			<th width="200">Name</th>
+			<th width="150">Packing</th>			
+			<th width="150">Operation</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @medicines.each do |medicine| %>
+		<tr>
+			<td><%= medicine.name %></td>
+			<td><%= medicine.packing.name %></td>
+			<td><%= link_to(raw("<i class='fi-zoom-in'></i>"),medicine) %><%= ' ' %>
+			<%= link_to(raw("<i class='fi-pencil'></i>"),edit_medicine_path(medicine)) %>
+			<%= link_to(raw("<i class='fi-x'></i>"),medicine, method: :delete, data: { confirm: 'Are you sure?' })%>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

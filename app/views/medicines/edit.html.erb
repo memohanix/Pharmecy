@@ -1,2 +1,6 @@
-<h1>Medicines#edit</h1>
-<p>Find me in app/views/medicines/edit.html.erb</p>
+<h1>Editing Medicine</h1>
+<%= render 'form' %>
+<ul class="button-group">
+  <li><%= link_to 'Show', @medicines,class:'button tiny alert' %></li>
+  <li><%= link_to 'Back', medicines_path,class:'button tiny alert' %> </li>
+</ul>
